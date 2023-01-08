@@ -11,6 +11,10 @@ import {
 } from "react-router-dom";
 
 import "./css/sb-admin-2.css";
+import Student from "./components/Student";
+import Teacher from "./components/Teacher";
+import AddTeacher from "./components/AddTeacher";
+import AddStudents from "./components/AddStudents";
 
 function App() {
   return (
@@ -21,8 +25,11 @@ function App() {
           <div id="content">
             <Navbar></Navbar>
             <Routes>
-              <Route path="/Student" element={<Student/>}></Route>
-            </Routes>
+              <Route path="/student" element={<Student />}></Route>
+              <Route path="/teacher" element={<Teacher />}></Route>
+              <Route path="/add-teacher-info" element={<AddTeacher />}></Route>
+              <Route path="/add-stud-info" element={<AddStudents />}></Route>
+             </Routes>
           </div>
         </div>
       </div>

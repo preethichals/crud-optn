@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Sidebar() {
   return (
@@ -24,15 +25,15 @@ function Sidebar() {
         <li className="nav-item active">
           <a className="nav-link" href="index.html">
             <i className="fas fa-fw fa-tachometer-alt"></i>
-            <span>Dashboard</span>
-            <a className="nav-link" href="index.html">
+            
+            <Link className="nav-link" to="/student">
               <i className="fas fa-fw fa-tachometer-alt"></i>
               <span>Student</span>
-            </a>
-            <a className="nav-link" href="index.html">
+            </Link>
+            <Link className="nav-link" to="/teacher">
               <i className="fas fa-fw fa-tachometer-alt"></i>
               <span>Teacher</span>
-            </a>
+            </Link>
           </a>
         </li>
 
