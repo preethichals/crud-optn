@@ -15,6 +15,8 @@ import Student from "./components/Student";
 import Teacher from "./components/Teacher";
 import AddTeacher from "./components/AddTeacher";
 import AddStudents from "./components/AddStudents";
+import ViewStudent from "./components/ViewStudent";
+import EditStudent from "./components/EditStudent";
 
 function App() {
   return (
@@ -26,10 +28,12 @@ function App() {
             <Navbar></Navbar>
             <Routes>
               <Route path="/student" element={<Student />}></Route>
+              <Route path="/student/:studentid" element={<ViewStudent />}></Route>
+              <Route path="/student/edit/:studentid" element={<EditStudent/>}></Route>
               <Route path="/teacher" element={<Teacher />}></Route>
               <Route path="/add-teacher-info" element={<AddTeacher />}></Route>
               <Route path="/add-stud-info" element={<AddStudents />}></Route>
-             </Routes>
+            </Routes>
           </div>
         </div>
       </div>
